@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueeaglesafaris | Experience Tanzania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"></div><button
+            class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="safaris.html">Safaris</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="video-background">
+                <!-- Placeholder video path - user needs to replace or add file -->
+                <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+                    <source src="assets/video/hero.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="fade-in">Experience the wild heart <br> of <span class="accent-text">Tanzania</span></h1>
+                <p class="fade-in delay-1">Embark on a journey where luxury meets the untamed savannah.</p>
+                <a href="safaris.html" class="cta-button fade-in delay-2">Explore Safaris</a>
+            </div>
+        </section>
+
+        <!-- Top Safaris Section -->
+        <section class="safaris-section" style="background-color: var(--color-bg-light);">
+            <div class="section-header">
+                <h2>Top Rated Safaris</h2>
+                <div class="separator"></div>
+                <p>Our most popular journeys into the wild.</p>
+            </div>
+
+            <div class="safaris-grid">
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/kilimanjaro.png" alt="Kilimanjaro Sky-Walk"></div>
+                    <div class="card-content">
+                        <h3>Kilimanjaro: Sky-Walk</h3>
+                        <p>Conquer the roof of Africa via the scenic Lemosho Route. 8 days of adventure.</p>
+                        <a href="safaris.html" class="text-link">View Itinerary</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/tarangire.png" alt="Photography Safari"></div>
+                    <div class="card-content">
+                        <h3>Eagle’s Eye Photo Safari</h3>
+                        <p>Capture the perfect shot in Tarangire with guides who understand light.</p>
+                        <a href="safaris.html" class="text-link">View Itinerary</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/serengeti.jpg" alt="Great Migration"></div>
+                    <div class="card-content">
+                        <h3>The Great Migration</h3>
+                        <p>Witness nature's most dramatic spectacle in exclusive comfort.</p>
+                        <a href="safaris.html" class="text-link">View Itinerary</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:3rem;">
+                <a href="safaris.html" class="secondary-button"
+                    style="background:transparent; border:1px solid var(--color-primary); color:var(--color-primary)">View
+                    All Safaris</a>
+            </div>
+        </section>
+
+        <!-- Destinations Teaser -->
+        <section class="destinations-section">
+            <div class="section-header">
+                <h2>Top Destinations</h2>
+                <div class="separator"></div>
+                <p>Curated experiences in the world's most breathtaking landscapes.</p>
+            </div>
+
+            <div class="destinations-grid">
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/serengeti.jpg" alt="Serengeti Plains"></div>
+                    <div class="card-content">
+                        <h3>Serengeti</h3>
+                        <p>Witness the Great Migration across endless plains.</p>
+                        <a href="destinations.html" class="text-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/ngorongoro.jpg" alt="Ngorongoro Crater"></div>
+                    <div class="card-content">
+                        <h3>Ngorongoro</h3>
+                        <p>A natural wonder teeming with wildlife in a lush caldera.</p>
+                        <a href="destinations.html" class="text-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/zanzibar.jpg" alt="Zanzibar Beaches"></div>
+                    <div class="card-content">
+                        <h3>Zanzibar</h3>
+                        <p>Unwind on pristine beaches with turquoise waters.</p>
+                        <a href="destinations.html" class="text-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:3rem;">
+                <a href="destinations.html" class="secondary-button"
+                    style="background:transparent; border:1px solid var(--color-primary); color:var(--color-primary)">View
+                    All Destinations</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section" style="background-color:var(--color-bg-light);">
+            <div class="section-header">
+                <h2>Traveler Stories</h2>
+                <div class="separator"></div>
+                <p>Echoes from the savannah.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="quote">The sunset over the Serengeti changed my view of the world. Blueeaglesafaris
+                        handled every detail with such grace and precision.</p>
+                    <p class="author">— Sarah Jenkins, UK</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="quote">We saw the Big Five in our first two days! The guides were incredibly knowledgeable
+                        and the lodges were pure luxury.</p>
+                    <p class="author">— Michael & Elena, Germany</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="quote">An unforgettable honeymoon. The private dinner in the bush was a highlight we will
+                        cherish forever. Highly recommended.</p>
+                    <p class="author">— David Ross, USA</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"
+                            style="margin-bottom:1rem;">
+                    </div>
+                    <p>Experience the wild heart of Tanzania with premium, sustainable safaris designed just for you.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="safaris.html">Our Safaris</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Serengeti</a></li>
+                        <li><a href="destinations.html">Ngorongoro</a></li>
+                        <li><a href="destinations.html">Zanzibar</a></li>
+                        <li><a href="destinations.html">Tarangire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Arusha, Tanzania</p>
+                    <p>+255 123 456 789</p>
+                    <p>info@blueeaglesafaris.com</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Blueeaglesafaris. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

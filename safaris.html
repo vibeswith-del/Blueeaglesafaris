@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safaris | Blueeaglesafaris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for Safari Page Cards - could be moved to style.css later */
+        .safari-list {
+            padding: var(--spacing-section) var(--spacing-container);
+            background: var(--color-bg-light);
+        }
+
+        .safari-card {
+            display: flex;
+            background: #fff;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .safari-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .safari-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .safari-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .safari-info {
+            flex: 2;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .safari-info h3 {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .specs {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            margin-top: -0.5rem;
+        }
+
+        .safari-info p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        @media(max-width: 768px) {
+            .safari-card {
+                flex-direction: column;
+            }
+
+            .safari-image {
+                height: 200px;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/serengeti.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"></div><button
+            class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="safaris.html" class="active">Safaris</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div>
+                <h1>Our Safari Packages</h1>
+                <p>Curated itineraries for every explorer.</p>
+            </div>
+        </section>
+
+        <section class="safari-list">
+
+            <!-- 1. Authentic Arusha -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/hero-poster.jpg" alt="Arusha Cultural Immersion">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>1 Day</span>
+                        <span>•</span>
+                        <span>Cultural Immersion</span>
+                    </div>
+                    <h3>Authentic Arusha: "Deep Roots"</h3>
+                    <p><strong>The Experience:</strong> Most travelers see Arusha through a car window. We take you into
+                        its heart. Visit a coffee farm, meet village elders, and enjoy a farm-to-table Swahili lunch. A
+                        sensory journey into the soul of the Wa-Arusha people.</p>
+                    <p class="price">From $195 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-arusha')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-arusha" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Every guest receives a small pouch of the coffee they hand-roasted themselves.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>08:30 AM</strong> The Coffee Awakening (Tengeru): Hand-roast beans over open
+                                fire.</li>
+                            <li><strong>11:00 AM</strong> The Healer’s Path (Ilkiding’a): Meet a village elder &
+                                herbalist.</li>
+                            <li><strong>01:00 PM</strong> Swahili Wellness Feast: Farm-to-table lunch & digestive tea.
+                            </li>
+                            <li><strong>02:30 PM</strong> The Maker’s Market: Private guided visit to local artisans.
+                            </li>
+                            <li><strong>04:30 PM</strong> Sunset Serenity (Lake Duluti): Nature walk & hand-washing
+                                ceremony.</li>
+                        </ul>
+                        <a href="contact.html?safari=arusha" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Photography Masterclass -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/tarangire.png" alt="Photography Safari">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>7 Days</span>
+                        <span>•</span>
+                        <span>Technical Photography</span>
+                    </div>
+                    <h3>Eagle’s Eye Photography Masterclass</h3>
+                    <p><strong>The Experience:</strong> Designed for photographers by guides who understand light.
+                        Anticipate movement and position for the "National Geographic" shot in Tarangire, Ngorongoro,
+                        and Serengeti. Includes modified 4x4s with beanbags and charging stations.</p>
+                    <p class="price">From $4,850 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-photo')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-photo" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Modified 4x4 with 360° views, custom beanbags, window mounts, and an on-board charging
+                                station for every seat.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> Arusha: Arrival and Gear Calibration. Briefing on "Light Curves".
+                            </li>
+                            <li><strong>Day 2</strong> Tarangire: "Land of Giants". Silhouette shots at sunset.</li>
+                            <li><strong>Day 3</strong> Ngorongoro: The Crater Mist (6:00 AM entry).</li>
+                            <li><strong>Day 4-5</strong> Central Serengeti: Predator's Pulse (Leopards in Seronera).
+                            </li>
+                            <li><strong>Day 6</strong> Serengeti: Wide-angle landscapes & Kopjes.</li>
+                            <li><strong>Day 7</strong> Departure: Sunrise shoot & scenic flight to Arusha.</li>
+                        </ul>
+                        <a href="contact.html?safari=photo" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Mt. Meru Wellness -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/hero-poster.jpg" alt="Mt. Meru Trek" style="filter: hue-rotate(40deg);">
+                    <!-- Quick tint for variety -->
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>5 Days</span>
+                        <span>•</span>
+                        <span>Wellness Trek</span>
+                    </div>
+                    <h3>Wellness Trek: "Summit & Serenity" (Mt. Meru)</h3>
+                    <p><strong>The Experience:</strong> The "Eagle’s Way" to climb. We treat Mt. Meru as a sanctuary for
+                        the mind. Focuses on breathing, pacing, and holistic recovery with "Forest Bathing" and daily
+                        wellness coaching.</p>
+                    <p class="price">From $1,350 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-meru')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-meru" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Daily "Pace-Breathing" coaching to prevent altitude sickness and organic,
+                                anti-inflammatory mountain menus.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> Momella to Miriakamba: "Forest Bathing" walk.</li>
+                            <li><strong>Day 2</strong> To Saddle Hut: Acclimatization hike to Little Meru.</li>
+                            <li><strong>Day 3</strong> Summit Push: Midnight ascent to Socialist Peak. Sunrise ritual.
+                            </li>
+                            <li><strong>Day 4</strong> Descent & Healing: Return to Arusha for "Mbarika" foot soak.</li>
+                            <li><strong>Day 5</strong> Farewell: Massage and celebratory lunch.</li>
+                        </ul>
+                        <a href="contact.html?safari=meru" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Kilimanjaro -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/kilimanjaro.png" alt="Kilimanjaro Climb">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>8 Days</span>
+                        <span>•</span>
+                        <span>Lemosho Route</span>
+                    </div>
+                    <h3>Kilimanjaro: "Sky-Walk & Serenity"</h3>
+                    <p><strong>The Experience:</strong> The most scenic route on the mountain, optimized for success (8
+                        days). Includes private portable toilets, medical-grade checks, and a post-climb "Singo" body
+                        ritual to rejuvenate.</p>
+                    <p class="price">From $2,950 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-kili')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-kili" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Private portable toilets, medical-grade pulse oximeters for daily health checks, and
+                                4-season "Serenity" tents.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1-2</strong> Western Slopes: Lush rainforest to Shira Plateau.</li>
+                            <li><strong>Day 3-4</strong> Shira & Moir Hut: "Climb High, Sleep Low" acclimatization.</li>
+                            <li><strong>Day 5-6</strong> Barranco Wall & Karanga: Adventurous scramble & views.</li>
+                            <li><strong>Day 7</strong> Uhuru Peak: Sunrise at the summit (Roof of Africa).</li>
+                            <li><strong>Day 8</strong> Mweka Gate: Descent & "Singo" body ritual in Arusha.</li>
+                        </ul>
+                        <a href="contact.html?safari=kili" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Family Safari -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/serengeti.jpg" alt="Family Safari">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>7 Days</span>
+                        <span>•</span>
+                        <span>Interactive Education</span>
+                    </div>
+                    <h3>Family Safari: The Classroom of the Wild</h3>
+                    <p><strong>The Experience:</strong> We turn the Serengeti into a classroom. Kids receive tracking
+                        kits and learn to identify tracks and calls. Includes night-time camera trap setup and
+                        star-mapping lessons.</p>
+                    <p class="price">$4,300 (Adult) / $3,300 (Child)</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-family')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-family" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Motion-sensor camera traps for night use and a personalized Blue Eagle Certificate.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> Arusha: Induction & Kit distribution (Binoculars, journals).</li>
+                            <li><strong>Day 2</strong> Tarangire: Identify tracks, dung, and calls.</li>
+                            <li><strong>Day 3</strong> Manyara: Canopy Walk & local school visit.</li>
+                            <li><strong>Day 4</strong> Ngorongoro: Big Five Scavenger Hunt.</li>
+                            <li><strong>Day 5-6</strong> Serengeti: Camera trap setup and star-mapping.</li>
+                            <li><strong>Day 7</strong> Graduation: Ceremony & flight to Arusha.</li>
+                        </ul>
+                        <a href="contact.html?safari=family" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Flying Safari -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/serengeti.jpg" alt="Flying Safari" style="filter: sepia(0.2);">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>5 Days</span>
+                        <span>•</span>
+                        <span>Speed & Exclusivity</span>
+                    </div>
+                    <h3>The Eagle’s Path (Flying Safari)</h3>
+                    <p><strong>The Experience:</strong> The ultimate luxury for those who value time. Fly directly into
+                        the Serengeti and Ngorongoro. Includes Hot Air Balloon safari and private champagne welcomes.
+                    </p>
+                    <p class="price">From $8,250 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-flying')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-flying" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>All internal flights included. Zero long-distance driving. Private VIP meet-and-greet.
+                            </p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> The Scenic Leap: Flight to Serengeti. Champagne welcome.</li>
+                            <li><strong>Day 2</strong> Serengeti Heart: Full day tracking. Private bush lunch.</li>
+                            <li><strong>Day 3</strong> Higher Perspective: Hot Air Balloon Safari.</li>
+                            <li><strong>Day 4</strong> Crater Jump: Flight to Rim. Sunset cocktails.</li>
+                            <li><strong>Day 5</strong> Final Flight: Crater game drive & flight to JRO.</li>
+                        </ul>
+                        <a href="contact.html?safari=flying" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Zanzibar -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/zanzibar.jpg" alt="Zanzibar Retreat">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>5 Days</span>
+                        <span>•</span>
+                        <span>Recovery & Culture</span>
+                    </div>
+                    <h3>Spice & Soul Hideaway (Zanzibar)</h3>
+                    <p><strong>The Experience:</strong> A sensory immersion into Stone Town and the North Coast.
+                        Includes private spice farm tour, "Singo" scrub ritual, and a private sandbank seafood grill.
+                    </p>
+                    <p class="price">From $3,250 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-zanzibar')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-zanzibar" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>Private dhow charters (no groups) and a customized spice box gift.</p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> Stone Town Secret: Private rooftop & history walk.</li>
+                            <li><strong>Day 2</strong> Scent of Zanzibar: Spice farm tour & Dhow sail.</li>
+                            <li><strong>Day 3</strong> Swahili Wellness: Beach villa & "Singo" scrub.</li>
+                            <li><strong>Day 4</strong> Blue Sandbank: Private boat & seafood grill.</li>
+                            <li><strong>Day 5</strong> Farewell: Ocean serenity & transfer.</li>
+                        </ul>
+                        <a href="contact.html?safari=zanzibar" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Northern Circuit -->
+            <div class="safari-card">
+                <div class="safari-image">
+                    <img src="assets/images/ngorongoro.jpg" alt="Northern Circuit">
+                </div>
+                <div class="safari-info">
+                    <div class="specs">
+                        <span>11 Days</span>
+                        <span>•</span>
+                        <span>The Complete Collection</span>
+                    </div>
+                    <h3>The Majestic Highlights</h3>
+                    <p><strong>The Experience:</strong> The full spectrum of Northern Tanzania. Arusha NP, Tarangire,
+                        Manyara, Ngorongoro, and the Serengeti. Includes "Wise-dom Exchange" with Maasai elders and a
+                        scenic flight return.</p>
+                    <p class="price">From $5,450 USD pp</p>
+
+                    <button class="secondary-button" onclick="toggleItinerary('itinerary-northern')">View Detailed
+                        Itinerary</button>
+
+                    <div id="itinerary-northern" class="itinerary-details">
+                        <div class="blue-eagle-touch">
+                            <h4><span style="font-size:1.2em">🦅</span> The Blue Eagle Touch</h4>
+                            <p>"Wisdom Exchange" with Maasai elders (no crowds) and scenic flight return from Serengeti.
+                            </p>
+                        </div>
+                        <ul class="day-list">
+                            <li><strong>Day 1</strong> Arusha Welcome: Boutique lodge & Swahili dinner.</li>
+                            <li><strong>Day 2</strong> Arusha NP: Walking safari & canoeing.</li>
+                            <li><strong>Day 3</strong> Tarangire: Elephants & Baobabs.</li>
+                            <li><strong>Day 4</strong> Lake Manyara: Groundwater forest & flamingoes.</li>
+                            <li><strong>Day 5</strong> Highlands: Wellness walk to Elephant Caves.</li>
+                            <li><strong>Day 6</strong> Ngorongoro Crater: Black Rhino tracking.</li>
+                            <li><strong>Day 7</strong> To Serengeti: Maasai "Wisdom Exchange".</li>
+                            <li><strong>Day 8-9</strong> Serengeti Immersion: The Great Migration.</li>
+                            <li><strong>Day 10</strong> Sky Path: Flight back to Arusha.</li>
+                            <li><strong>Day 11</strong> Final Frame: Cultural Heritage Center & Depart.</li>
+                        </ul>
+                        <a href="contact.html?safari=northern" class="secondary-button"
+                            style="margin-top:1rem; width:100%; text-align:center;">Inquire to Book</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"
+                            style="margin-bottom:1rem;">
+                    </div>
+                    <p>Experience the wild heart of Tanzania with premium, sustainable safaris designed just for you.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="safaris.html">Our Safaris</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Serengeti</a></li>
+                        <li><a href="destinations.html">Ngorongoro</a></li>
+                        <li><a href="destinations.html">Zanzibar</a></li>
+                        <li><a href="destinations.html">Tarangire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Arusha, Tanzania</p>
+                    <p>+255 123 456 789</p>
+                    <p>info@blueeaglesafaris.com</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Blueeaglesafaris. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

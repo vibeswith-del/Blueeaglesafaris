@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Blueeaglesafaris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensure background fits contact page style */
+        body {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .main-header {
+            background-color: #ffffff;
+            color: var(--color-text-dark);
+        }
+
+        /* Always solid header on this page */
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"></div><button
+            class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="safaris.html">Safaris</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Section Content directly -->
+        <section class="contact-section" style="padding-top: 8rem;">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p class="lead-text">Ready to experience the wild? Contact us and let's plan your unforgettable
+                        safari adventure.</p>
+
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@blueeaglesafaris.com"
+                                style="color: inherit; text-decoration: none;">info@blueeaglesafaris.com</a></p>
+                        <p><a href="mailto:reservations@blueeaglesafaris.com"
+                                style="color: inherit; text-decoration: none;">reservations@blueeaglesafaris.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+255123456789" style="color: inherit; text-decoration: none;">+255 123 456
+                                789</a></p>
+                        <p><a href="tel:+255987654321" style="color: inherit; text-decoration: none;">+255 987 654
+                                321</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Address</h4>
+                        <p>Arusha, Tanzania<br>P.O. Box 1234</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 3:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3 style="margin-bottom: 2rem; color: var(--color-accent); font-size: 1.5rem;">Safari Inquiry Form
+                    </h3>
+                    <form class="inquiry-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will contact you shortly.');">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Full Name *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email Address *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="contact-method" name="contact-method">
+                                <option value="" disabled selected> </option>
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                                <option value="whatsapp">WhatsApp</option>
+                            </select>
+                            <label for="contact-method">Preferred Contact Method</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="travel-date-from" name="travel-date-from" placeholder=" ">
+                            <label for="travel-date-from">Travel Date From</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="travel-date-to" name="travel-date-to" placeholder=" ">
+                            <label for="travel-date-to">Travel Date To</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="travelers" name="travelers" min="1" placeholder=" ">
+                            <label for="travelers">Number of Travelers</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="safari-type" name="safari-type" required>
+                                <option value="" disabled selected> </option>
+                                <option value="serengeti">Serengeti Safari</option>
+                                <option value="ngorongoro">Ngorongoro Crater</option>
+                                <option value="zanzibar">Zanzibar Beach</option>
+                                <option value="kilimanjaro">Mount Kilimanjaro</option>
+                                <option value="manyara">Lake Manyara</option>
+                                <option value="tarangire">Tarangire National Park</option>
+                                <option value="custom">Custom Itinerary</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="safari-type">Select Safari Type *</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="budget" name="budget">
+                                <option value="" disabled selected> </option>
+                                <option value="under-1000">Under $1,000</option>
+                                <option value="1000-2500">$1,000 - $2,500</option>
+                                <option value="2500-5000">$2,500 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="over-10000">Over $10,000</option>
+                                <option value="discuss">Prefer to discuss</option>
+                            </select>
+                            <label for="budget">Budget Range (USD)</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Tell us about your dream trip, special requirements, or any
+                                questions... *</label>
+                        </div>
+                        <button type="submit" class="cta-button submit-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"
+                            style="margin-bottom:1rem;">
+                    </div>
+                    <p>Experience the wild heart of Tanzania with premium, sustainable safaris designed just for you.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="safaris.html">Our Safaris</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Serengeti</a></li>
+                        <li><a href="destinations.html">Ngorongoro</a></li>
+                        <li><a href="destinations.html">Zanzibar</a></li>
+                        <li><a href="destinations.html">Tarangire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Arusha, Tanzania</p>
+                    <p>+255 123 456 789</p>
+                    <p>info@blueeaglesafaris.com</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Blueeaglesafaris. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

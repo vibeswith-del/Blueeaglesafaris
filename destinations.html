@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Blueeaglesafaris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/ngorongoro.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"></div><button
+            class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="safaris.html">Safaris</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div>
+                <h1>Destinations</h1>
+                <p>Explore the wild heart of East Africa.</p>
+            </div>
+        </section>
+
+        <!-- Use existing class for layout -->
+        <section class="destinations-section">
+            <div class="destinations-grid">
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/serengeti.jpg" alt="Serengeti Plains"></div>
+                    <div class="card-content">
+                        <h3>Serengeti</h3>
+                        <p>Witness the Great Migration across endless plains. A landscape that defines the very essence
+                            of safari.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/ngorongoro.jpg" alt="Ngorongoro Crater"></div>
+                    <div class="card-content">
+                        <h3>Ngorongoro</h3>
+                        <p>A natural wonder teeming with wildlife in a lush caldera. The highest density of game in
+                            Africa.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="assets/images/zanzibar.jpg" alt="Zanzibar Beaches"></div>
+                    <div class="card-content">
+                        <h3>Zanzibar</h3>
+                        <p>Unwind on pristine beaches with turquoise waters. A historic spice island with rich culture.
+                        </p>
+                    </div>
+                </div>
+                <!-- Placeholder for more destinations -->
+                <div class="card">
+                    <div class="card-image"
+                        style="background: #eee; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#ccc; font-size:2rem;">Mount Kilimanjaro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mount Kilimanjaro</h3>
+                        <p>The Roof of Africa. diverse ecological zones from rainforests to glacial summits.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"
+                        style="background: #eee; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#ccc; font-size:2rem;">Tarangire</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Tarangire</h3>
+                        <p>Famous for its large elephant herds and iconic baobab trees.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"
+                        style="background: #eee; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#ccc; font-size:2rem;">Lake Manyara</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lake Manyara</h3>
+                        <p>Known for tree-climbing lions and vast flocks of pink flamingos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Blueeaglesafaris" class="logo-img"
+                            style="margin-bottom:1rem;">
+                    </div>
+                    <p>Experience the wild heart of Tanzania with premium, sustainable safaris designed just for you.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="safaris.html">Our Safaris</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html">Serengeti</a></li>
+                        <li><a href="destinations.html">Ngorongoro</a></li>
+                        <li><a href="destinations.html">Zanzibar</a></li>
+                        <li><a href="destinations.html">Tarangire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Arusha, Tanzania</p>
+                    <p>+255 123 456 789</p>
+                    <p>info@blueeaglesafaris.com</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Blueeaglesafaris. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
