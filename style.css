@@ -513,7 +513,7 @@ footer {
 .footer-logo-text {
     font-family: var(--font-heading);
     font-size: 1.3rem;
-    color: var(--color-accent);
+    color: #ffffff;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
