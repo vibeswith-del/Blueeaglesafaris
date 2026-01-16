@@ -537,15 +537,22 @@ footer {
 @media (max-width: 768px) {
     .main-header {
         padding: 1.5rem;
-        /* Remove flex-direction column, keep row for logo + hamburger */
-        background-color: var(--color-primary-dark) !important;
-        /* Force dark background */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        background-color: #ffffff !important;
+        /* Force white background on mobile always */
+        color: var(--color-text-dark) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Force hamburger menu to be white on mobile */
-    .menu-toggle span {
-        background-color: var(--color-text-light) !important;
+    .main-header.scrolled {
+        background-color: #ffffff !important;
+        /* Keep it white on scroll */
+        color: var(--color-text-dark) !important;
+    }
+
+    /* Force hamburger menu to be dark on mobile at all times for visibility on white bg */
+    .menu-toggle span,
+    .main-header.scrolled .menu-toggle span {
+        background-color: var(--color-text-dark) !important;
     }
 
     .menu-toggle {

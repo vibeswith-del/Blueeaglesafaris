@@ -5,17 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleScroll = () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
-            header.style.backgroundColor = '#ffffff'; // White background when scrolled
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
         } else {
             header.classList.remove('scrolled');
-            // Only transparent if desktop, mobile has solid color via CSS
-            if (window.innerWidth > 768) {
-                header.style.backgroundColor = 'transparent';
-                header.style.boxShadow = 'none';
-            } else {
-                header.style.backgroundColor = '#ffffff'; // White background on mobile
-            }
         }
     };
 
