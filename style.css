@@ -600,23 +600,23 @@ footer {
     }
 
     .main-header nav a {
-        display: block;
+        display: inline-block;
         color: #ffffff;
-        /* White text */
-        background-color: var(--color-primary);
-        /* Dark blue background */
-        padding: 0.8rem 1.5rem;
-        border-radius: 6px;
-        text-align: center;
+        /* White text on dark menu */
         text-decoration: none;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
+        font-size: 1.1rem;
+        padding: 0;
+        background: transparent;
+        transition: color 0.3s ease;
     }
 
     .main-header nav a:hover {
-        background-color: var(--color-accent);
-        /* Gold on hover */
-        color: var(--color-primary-dark);
+        color: var(--color-accent);
+    }
+
+    /* Ensure the underline from desktop works on mobile too */
+    .main-header nav a::after {
+        background: var(--color-accent);
     }
 
     /* Hamburger animation when active */
