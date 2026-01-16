@@ -953,6 +953,7 @@ footer {
     margin-top: 1rem;
     cursor: pointer;
     background: transparent;
+    color: #000000;
     /* Override transparent from cta-button default if needed */
 }
 
