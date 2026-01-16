@@ -1328,60 +1328,6 @@ footer {
 
 
 
-/* Association Badges Section */
-.associations-section {
-    padding: 3rem var(--spacing-container);
-    background-color: #fff;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.associations-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.assoc-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    opacity: 0.4;
-    filter: grayscale(100%);
-    transition: all 0.4s ease;
-}
-
-.assoc-badge:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: translateY(-5px);
-}
-
-.badge-logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    border: 3px solid var(--color-primary);
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.assoc-badge span.badge-name {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 /* Footer (Unified) */
 footer {
     background-color: var(--color-primary-dark);
