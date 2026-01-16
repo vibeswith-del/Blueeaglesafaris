@@ -806,8 +806,8 @@ footer {
 
 /* Contact Section & Form */
 .contact-section {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
+    background-color: #ffffff;
+    color: var(--color-text-dark);
     padding: var(--spacing-section) var(--spacing-container);
 }
 
@@ -827,14 +827,14 @@ footer {
 
 .contact-info h2 {
     font-size: 2.5rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: 1.5rem;
 }
 
 .lead-text {
     font-size: 1.2rem;
     margin-bottom: 3rem;
-    opacity: 0.9;
+    color: var(--color-text-muted);
     font-weight: 300;
 }
 
@@ -846,21 +846,22 @@ footer {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
 
 .info-item p {
     font-size: 1.1rem;
+    color: var(--color-text-dark);
 }
 
 .contact-form-wrapper {
     flex: 1;
     min-width: 300px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-bg-light);
     padding: 3rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .form-group {
@@ -875,9 +876,9 @@ footer {
     width: 100%;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px 0;
-    color: #fff;
+    color: var(--color-text-dark);
     font-family: var(--font-body);
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -885,21 +886,20 @@ footer {
 }
 
 .inquiry-form select {
-    color: #fff;
-    /* Ensure text is white */
+    color: var(--color-text-dark);
 }
 
-/* For select options, keep them dark so they are readable on white background if browser defaults */
+/* For select options */
 .inquiry-form select option {
-    background-color: var(--color-primary);
-    color: #fff;
+    background-color: #ffffff;
+    color: var(--color-text-dark);
 }
 
 .inquiry-form label {
     position: absolute;
     top: 10px;
     left: 0;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text-muted);
     pointer-events: none;
     transition: all 0.3s ease;
 }
@@ -913,32 +913,31 @@ footer {
 .inquiry-form textarea:not(:placeholder-shown)~label {
     top: -20px;
     font-size: 0.8rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .inquiry-form input:focus,
 .inquiry-form textarea:focus,
 .inquiry-form select:focus {
-    border-bottom-color: var(--color-accent);
+    border-bottom-color: var(--color-primary);
 }
 
 /* Date and number input specific styles */
 .inquiry-form input[type="date"],
 .inquiry-form input[type="number"],
 .inquiry-form input[type="tel"] {
-    color-scheme: dark;
+    color-scheme: light;
 }
 
 .inquiry-form input[type="date"]::-webkit-calendar-picker-indicator,
 .inquiry-form input[type="date"]::-webkit-inner-spin-button {
-    filter: invert(1);
+    filter: none;
     cursor: pointer;
 }
 
 .inquiry-form input[type="number"]::-webkit-inner-spin-button,
 .inquiry-form input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
-    filter: invert(0.7);
 }
 
 /* For select dropdown labels - float when selected */
@@ -946,7 +945,7 @@ footer {
 .inquiry-form select:not([value=""]):not([value=" "])~label {
     top: -20px;
     font-size: 0.8rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .submit-btn {
