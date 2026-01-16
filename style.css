@@ -536,28 +536,41 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .main-header {
-        padding: 1.5rem;
+        padding: 1rem 1.5rem;
         background-color: #ffffff !important;
-        /* Force white background on mobile always */
-        color: var(--color-text-dark) !important;
+        /* White background as requested */
+        color: var(--color-primary) !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .main-header.scrolled {
         background-color: #ffffff !important;
-        /* Keep it white on scroll */
-        color: var(--color-text-dark) !important;
+        color: var(--color-primary) !important;
     }
 
-    /* Force hamburger menu to be dark on mobile at all times for visibility on white bg */
-    .menu-toggle span,
-    .main-header.scrolled .menu-toggle span {
-        background-color: var(--color-text-dark) !important;
-    }
-
+    /* Styles for the hamburger button container */
     .menu-toggle {
         display: flex;
-        /* Show hamburger */
+        /* Ensure it's shown */
+        background-color: var(--color-primary) !important;
+        /* Dark blue background */
+        padding: 10px;
+        border-radius: 6px;
+        width: 44px;
+        height: 44px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Hamburger icons (spans) now white on blue bg */
+    .menu-toggle span,
+    .main-header.scrolled .menu-toggle span {
+        background-color: #ffffff !important;
+        /* White buttons */
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
     }
 
     /* Hide standard nav by default on mobile */
@@ -568,11 +581,11 @@ footer {
         /* Slide out */
         width: 70%;
         height: 100vh;
-        background-color: var(--color-primary-dark);
-        /* Dark background */
+        background-color: #ffffff;
+        /* White menu background */
         padding: 6rem 2rem;
         transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .main-header nav.active {
@@ -587,8 +600,8 @@ footer {
     }
 
     .main-header nav a {
-        color: var(--color-text-light);
-        /* White text */
+        color: var(--color-primary);
+        /* Blue text on white menu */
     }
 
     /* Hamburger animation when active */
