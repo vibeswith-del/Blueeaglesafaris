@@ -1408,6 +1408,52 @@ footer {
     }
 }
 
+/* Why Travel With Us Section */
+.why-travel-section {
+    padding: var(--spacing-section) var(--spacing-container);
+    background-color: var(--color-bg-light);
+    text-align: center;
+}
+
+.why-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.why-feature-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.why-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.why-feature-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.why-feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Page Headers (Common) */
 .page-header {
     height: 50vh;
