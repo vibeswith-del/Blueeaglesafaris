@@ -81,6 +81,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log("Blueeaglesafaris initialized.");
+
+    // Live Weather Widget Implementation
+    const initWeatherWidgets = () => {
+        const widgets = document.querySelectorAll('.weather-widget');
+
+        widgets.forEach(async (widget) => {
+            const lat = widget.getAttribute('data-lat');
+            const lon = widget.getAttribute('data-lon');
+
+            if (!lat || !lon) return;
+
+            try {
+                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+                const data = await response.json();
+
+                if (data.current_weather) {
+                    const temp = Math.round(data.current_weather.temperature);
+                    const windspeed = data.current_weather.windspeed;
+
+                    widget.innerHTML = `
+                        <div class="weather-info">
+                            <span class="weather-temp">${temp}°C</span>
+                            <span class="weather-live-indicator"><span class="live-dot"></span>Live</span>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error fetching weather:', error);
+                widget.innerHTML = `<span class="weather-error">Weather unavailable</span>`;
+            }
+        });
+    };
+
+    if (document.querySelector('.weather-widget')) {
+        initWeatherWidgets();
+    }
 });
 
 // Global function for toggle functionality

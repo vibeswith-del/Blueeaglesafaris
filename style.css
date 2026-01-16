@@ -1355,6 +1355,73 @@ footer {
     letter-spacing: 1.5px;
 }
 
+/* Weather Widget */
+.weather-widget {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(26, 47, 95, 0.05);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    border-left: 3px solid var(--color-accent);
+}
+
+.weather-loading {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.weather-temp {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.weather-live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e74c3c;
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    display: inline-block;
+    animation: weather-pulse 1.5s infinite;
+}
+
+@keyframes weather-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 
 /* Footer (Unified) */
