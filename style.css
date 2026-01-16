@@ -599,10 +599,11 @@ footer {
         font-size: 1.1rem;
     }
 
-    .main-header nav a {
+    .main-header nav a,
+    .main-header.scrolled nav a {
         display: inline-block;
-        color: #ffffff;
-        /* White text on dark menu */
+        color: #ffffff !important;
+        /* Force white text on dark menu regardless of scroll */
         text-decoration: none;
         font-size: 1.1rem;
         padding: 0;
@@ -610,8 +611,9 @@ footer {
         transition: color 0.3s ease;
     }
 
-    .main-header nav a:hover {
-        color: var(--color-accent);
+    .main-header nav a:hover,
+    .main-header.scrolled nav a:hover {
+        color: var(--color-accent) !important;
     }
 
     /* Ensure the underline from desktop works on mobile too */
