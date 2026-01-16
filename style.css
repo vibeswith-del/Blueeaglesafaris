@@ -538,7 +538,14 @@ footer {
     .main-header {
         padding: 1.5rem;
         /* Remove flex-direction column, keep row for logo + hamburger */
-        background-color: #ffffff;
+        background-color: var(--color-primary-dark) !important;
+        /* Force dark background */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Force hamburger menu to be white on mobile */
+    .menu-toggle span {
+        background-color: var(--color-text-light) !important;
     }
 
     .menu-toggle {
@@ -555,6 +562,7 @@ footer {
         width: 70%;
         height: 100vh;
         background-color: var(--color-primary-dark);
+        /* Dark background */
         padding: 6rem 2rem;
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
@@ -573,6 +581,7 @@ footer {
 
     .main-header nav a {
         color: var(--color-text-light);
+        /* White text */
     }
 
     /* Hamburger animation when active */
