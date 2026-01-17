@@ -153,6 +153,37 @@ a {
     color: var(--color-accent);
 }
 
+.currency-selector {
+    display: flex;
+    align-items: center;
+}
+
+#currency-select {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: inherit;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.main-header.scrolled #currency-select {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+#currency-select:hover {
+    border-color: var(--color-accent);
+}
+
+#currency-select option {
+    background-color: #fff;
+    color: var(--color-text-dark);
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -288,6 +319,171 @@ a {
 .section-header p {
     color: var(--color-text-muted);
     font-size: 1.1rem;
+}
+
+/* Testimonials Slider */
+.testimonial-slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-slider .testimonial-card {
+    min-width: 100%;
+    padding: 3rem;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    margin: 0;
+}
+
+.testimonial-slider .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.testimonial-slider .author {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    padding: 0 1rem;
+}
+
+.slider-btn {
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--color-accent);
+    transform: scale(1.2);
+}
+
+/* Virtual Map Section */
+.map-section {
+    padding: 4rem var(--spacing-container);
+    background: #fff;
+    text-align: center;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background: #f0f7ff;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: inset 0 0 50px rgba(26, 47, 95, 0.05);
+}
+
+#tanzania-map {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.map-region {
+    fill: #e0e0e0;
+    stroke: #fff;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.map-region:hover {
+    fill: var(--color-accent);
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.map-region.active {
+    fill: var(--color-primary);
+}
+
+.map-label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    fill: var(--color-primary);
+    pointer-events: none;
+    font-weight: 600;
+}
+
+.highlight-card {
+    animation: pulseHighlight 2s ease;
+}
+
+@keyframes pulseHighlight {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+        border-color: var(--color-accent);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
 }
 
 /* Destinations Grid */
@@ -718,6 +914,37 @@ footer {
     padding-top: 2rem;
     font-size: 0.8rem;
     opacity: 0.5;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
 }
 
 /* Animations */

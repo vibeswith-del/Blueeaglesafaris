@@ -24,6 +24,13 @@
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="currency-selector">
+                    <select id="currency-select" aria-label="Select Currency">
+                        <option value="USD" selected>USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="GBP">GBP (£)</option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
@@ -56,7 +63,8 @@
 
             <div class="safaris-grid">
                 <div class="card">
-                    <div class="card-image"><img src="assets/images/kilimanjaro.png" alt="Kilimanjaro Sky-Walk"></div>
+                    <div class="card-image"><img src="assets/images/kilimanjaro.png" alt="Kilimanjaro Sky-Walk"
+                            loading="lazy"></div>
                     <div class="card-content">
                         <h3>Kilimanjaro: Sky-Walk</h3>
                         <p>Conquer the roof of Africa via the scenic Lemosho Route. 8 days of adventure.</p>
@@ -65,7 +73,8 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"><img src="assets/images/tarangire.png" alt="Photography Safari"></div>
+                    <div class="card-image"><img src="assets/images/tarangire.png" alt="Photography Safari"
+                            loading="lazy"></div>
                     <div class="card-content">
                         <h3>Eagle’s Eye Photo Safari</h3>
                         <p>Capture the perfect shot in Tarangire with guides who understand light.</p>
@@ -99,7 +108,8 @@
 
             <div class="destinations-grid">
                 <div class="card">
-                    <div class="card-image"><img src="assets/images/serengeti.jpg" alt="Serengeti Plains"></div>
+                    <div class="card-image"><img src="assets/images/serengeti.jpg" alt="Serengeti Plains"
+                            loading="lazy"></div>
                     <div class="card-content">
                         <h3>Serengeti</h3>
                         <p>Witness the Great Migration across endless plains.</p>
@@ -108,7 +118,8 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"><img src="assets/images/ngorongoro.jpg" alt="Ngorongoro Crater"></div>
+                    <div class="card-image"><img src="assets/images/ngorongoro.jpg" alt="Ngorongoro Crater"
+                            loading="lazy"></div>
                     <div class="card-content">
                         <h3>Ngorongoro</h3>
                         <p>A natural wonder teeming with wildlife in a lush caldera.</p>
@@ -153,7 +164,7 @@
 
                 <!-- Medium Card (Top Middle) -->
                 <a href="safaris.html" class="exp-card medium">
-                    <img src="assets/images/serengeti.jpg" alt="Big Five">
+                    <img src="assets/images/serengeti.jpg" alt="Big Five" loading="lazy">
                     <div class="exp-content">
                         <h3>Big Five</h3>
                         <p>Encounter Africa's legendary Big Five in the Serengeti.</p>
@@ -162,7 +173,7 @@
 
                 <!-- Wide Card (Top Right) -->
                 <a href="safaris.html" class="exp-card wide">
-                    <img src="assets/images/kilimanjaro.png" alt="Hiking">
+                    <img src="assets/images/kilimanjaro.png" alt="Hiking" loading="lazy">
                     <div class="exp-content">
                         <h3>Hiking</h3>
                         <p>Conquer the roof of Africa with expert guides.</p>
@@ -171,7 +182,7 @@
 
                 <!-- Medium Card (Bottom Middle) -->
                 <a href="safaris.html" class="exp-card medium">
-                    <img src="assets/images/tarangire.png" alt="Family Safaris">
+                    <img src="assets/images/tarangire.png" alt="Family Safaris" loading="lazy">
                     <div class="exp-content">
                         <h3>Family Fun</h3>
                         <p>Tailor-made adventures for all ages.</p>
@@ -180,7 +191,7 @@
 
                 <!-- Wide Card (Bottom Right) -->
                 <a href="safaris.html" class="exp-card wide">
-                    <img src="assets/images/ngorongoro.jpg" alt="Wildlife encounters">
+                    <img src="assets/images/ngorongoro.jpg" alt="Wildlife encounters" loading="lazy">
                     <div class="exp-content">
                         <h3>Wildlife</h3>
                         <p>Immerse yourself in nature's greatest theater.</p>
@@ -236,25 +247,11 @@
                 <p>Echoes from the savannah.</p>
             </div>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote">The sunset over the Serengeti changed my view of the world. Blueeaglesafaris
-                        handled every detail with such grace and precision.</p>
-                    <p class="author">— Sarah Jenkins, UK</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote">We saw the Big Five in our first two days! The guides were incredibly knowledgeable
-                        and the lodges were pure luxury.</p>
-                    <p class="author">— Michael & Elena, Germany</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote">An unforgettable honeymoon. The private dinner in the bush was a highlight we will
-                        cherish forever. Highly recommended.</p>
-                    <p class="author">— David Ross, USA</p>
-                </div>
+            <div class="quote-icon">“</div>
+            <p class="quote">An unforgettable honeymoon. The private dinner in the bush was a highlight we will
+                cherish forever. Highly recommended.</p>
+            <p class="author">— David Ross, USA</p>
+            </div>
             </div>
         </section>
 
@@ -328,6 +325,15 @@
             </div>
         </footer>
     </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/255755209473" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.025 7.788l-2.025 7.387 7.553-1.983c2.251 1.217 4.821 1.914 7.553 1.914 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.608 0-5.056-0.697-7.173-1.92l-0.512-0.301-4.485 1.176 1.197-4.368-0.328-0.523c-1.128-1.789-1.725-3.864-1.725-6.064 0-6.251 5.083-11.333 11.333-11.333s11.333 5.083 11.333 11.333-5.083 11.333-11.333 11.333zM22.504 19.349c-0.355-0.179-2.101-1.037-2.433-1.156-0.332-0.119-0.573-0.179-0.816 0.179s-0.932 1.156-1.144 1.4c-0.212 0.243-0.424 0.274-0.78 0.095-0.355-0.179-1.5-0.552-2.859-1.764-1.056-0.941-1.771-2.104-1.979-2.461s-0.021-0.552 0.157-0.729c0.16-0.16 0.355-0.413 0.533-0.621s0.237-0.355 0.355-0.592c0.119-0.237 0.059-0.443-0.031-0.621s-0.816-1.967-1.115-2.685c-0.292-0.701-0.589-0.605-0.816-0.617s-0.455-0.013-0.701-0.013c-0.243 0-0.643 0.091-0.979 0.467s-1.285 1.256-1.285 3.064c0 1.808 1.315 3.555 1.5 3.8s2.583 3.944 6.256 5.531c0.873 0.377 1.556 0.603 2.088 0.771 0.877 0.279 1.675 0.239 2.305 0.145 0.704-0.105 2.101-0.859 2.397-1.688s0.297-1.539 0.211-1.688c-0.091-0.145-0.332-0.236-0.688-0.417z">
+            </path>
+        </svg>
+    </a>
 
     <script src="script.js"></script>
 </body>

@@ -115,6 +115,13 @@
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="currency-selector">
+                    <select id="currency-select" aria-label="Select Currency">
+                        <option value="USD" selected>USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="GBP">GBP (£)</option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
@@ -144,7 +151,8 @@
                     <p><strong>The Experience:</strong> Most travelers see Arusha through a car window. We take you into
                         its heart. Visit a coffee farm, meet village elders, and enjoy a farm-to-table Swahili lunch. A
                         sensory journey into the soul of the Wa-Arusha people.</p>
-                    <p class="price">From $195 USD pp</p>
+                    <p class="price" data-usd="195">From <span class="price-symbol">$</span><span
+                            class="price-value">195</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-arusha')">View Detailed
                         Itinerary</button>
@@ -187,7 +195,8 @@
                     <p><strong>The Experience:</strong> Designed for photographers by guides who understand light.
                         Anticipate movement and position for the "National Geographic" shot in Tarangire, Ngorongoro,
                         and Serengeti. Includes modified 4x4s with beanbags and charging stations.</p>
-                    <p class="price">From $4,850 USD pp</p>
+                    <p class="price" data-usd="4850">From <span class="price-symbol">$</span><span
+                            class="price-value">4850</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-photo')">View Detailed
                         Itinerary</button>
@@ -230,7 +239,8 @@
                     <p><strong>The Experience:</strong> The "Eagle’s Way" to climb. We treat Mt. Meru as a sanctuary for
                         the mind. Focuses on breathing, pacing, and holistic recovery with "Forest Bathing" and daily
                         wellness coaching.</p>
-                    <p class="price">From $1,350 USD pp</p>
+                    <p class="price" data-usd="1350">From <span class="price-symbol">$</span><span
+                            class="price-value">1350</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-meru')">View Detailed
                         Itinerary</button>
@@ -270,7 +280,8 @@
                     <p><strong>The Experience:</strong> The most scenic route on the mountain, optimized for success (8
                         days). Includes private portable toilets, medical-grade checks, and a post-climb "Singo" body
                         ritual to rejuvenate.</p>
-                    <p class="price">From $2,950 USD pp</p>
+                    <p class="price" data-usd="2950">From <span class="price-symbol">$</span><span
+                            class="price-value">2950</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-kili')">View Detailed
                         Itinerary</button>
@@ -309,7 +320,9 @@
                     <p><strong>The Experience:</strong> We turn the Serengeti into a classroom. Kids receive tracking
                         kits and learn to identify tracks and calls. Includes night-time camera trap setup and
                         star-mapping lessons.</p>
-                    <p class="price">$4,300 (Adult) / $3,300 (Child)</p>
+                    <p class="price"><span data-usd="4300"><span class="price-symbol">$</span><span
+                                class="price-value">4300</span></span> (Adult) / <span data-usd="3300"><span
+                                class="price-symbol">$</span><span class="price-value">3300</span></span> (Child)</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-family')">View Detailed
                         Itinerary</button>
@@ -348,7 +361,8 @@
                     <p><strong>The Experience:</strong> The ultimate luxury for those who value time. Fly directly into
                         the Serengeti and Ngorongoro. Includes Hot Air Balloon safari and private champagne welcomes.
                     </p>
-                    <p class="price">From $8,250 USD pp</p>
+                    <p class="price" data-usd="8250">From <span class="price-symbol">$</span><span
+                            class="price-value">8250</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-flying')">View Detailed
                         Itinerary</button>
@@ -387,7 +401,8 @@
                     <p><strong>The Experience:</strong> A sensory immersion into Stone Town and the North Coast.
                         Includes private spice farm tour, "Singo" scrub ritual, and a private sandbank seafood grill.
                     </p>
-                    <p class="price">From $3,250 USD pp</p>
+                    <p class="price" data-usd="3250">From <span class="price-symbol">$</span><span
+                            class="price-value">3250</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-zanzibar')">View Detailed
                         Itinerary</button>
@@ -425,7 +440,8 @@
                     <p><strong>The Experience:</strong> The full spectrum of Northern Tanzania. Arusha NP, Tarangire,
                         Manyara, Ngorongoro, and the Serengeti. Includes "Wise-dom Exchange" with Maasai elders and a
                         scenic flight return.</p>
-                    <p class="price">From $5,450 USD pp</p>
+                    <p class="price" data-usd="5450">From <span class="price-symbol">$</span><span
+                            class="price-value">5450</span> USD pp</p>
 
                     <button class="secondary-button" onclick="toggleItinerary('itinerary-northern')">View Detailed
                         Itinerary</button>
