@@ -143,12 +143,18 @@ a {
     color: var(--color-text-light);
     text-decoration: none;
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.5px;
     position: relative;
-    transition: all 0.3s ease;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    /* Improved contrast on light backgrounds */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.5rem 1.2rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: block;
 }
 
 .main-header.scrolled nav a {
@@ -179,6 +185,21 @@ a {
 .currency-selector {
     display: flex;
     align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.main-header.scrolled .currency-selector {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-color: transparent;
+    padding: 0;
 }
 
 #currency-select {
