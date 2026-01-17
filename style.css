@@ -61,8 +61,12 @@ a {
     align-items: center;
     padding: 2rem var(--spacing-container);
     z-index: 100;
-    transition: all 0.3s ease;
-    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(0, 0, 0, 0.15);
+    /* Subtle dark overlay for contrast */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px);
     color: var(--color-text-light);
 }
 
@@ -127,11 +131,15 @@ a {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    /* Improved contrast on light backgrounds */
 }
 
 .main-header.scrolled nav a {
     color: var(--color-text-dark);
+    text-shadow: none;
+    /* Remove shadow on white background */
 }
 
 .main-header nav a::after {
