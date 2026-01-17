@@ -234,28 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initTestimonialSlider();
 
-    // Virtual Safari Map Logic
-    const initSafariMap = () => {
-        const regions = document.querySelectorAll('.map-region');
-
-        regions.forEach(region => {
-            region.addEventListener('click', () => {
-                const targetId = region.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                    // Optional: highlight the card
-                    targetElement.classList.add('highlight-card');
-                    setTimeout(() => targetElement.classList.remove('highlight-card'), 2000);
-                }
-            });
-        });
-    };
-
-    initSafariMap();
-
     // Lightbox Gallery Logic
     const initLightbox = () => {
         const lightbox = document.getElementById('lightbox');
